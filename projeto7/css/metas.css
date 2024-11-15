@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65%;
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(to bottom, #00BFFF, #87CEEB); /* Gradiente de fundo */
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: 'Open Sans', sans-serif;
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover; 
+    overflow: hidden;
+}
+
+p {
+    font-family: "Indie Flower", cursive;
+    font-weight: bold; 
+    font-size: 24px; 
+    font-style: normal;
+}
+
+span{
+    font-size: 30px;
+}
+
+.todo {
+    display: flex;
+    width: 50vw;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.todo__title {
+    display: flex;
+    font-family: "Pixelify Sans", sans-serif;
+    background-color: var(--secondary-color);
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0; 
+    box-shadow: 1px 1px 5px var(--secondary-color);
+    font-size: 3rem;
+    padding: 10px 5px; 
+    color: var(--primary-color);
+}
+
+.cloud-img {
+    max-width: 200px;
+    height: auto;
+    margin: 0 5px;
+}
+
+.todo__list {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.todo__item {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 1px 1px 5px var(--secondary-color);
+}
+
+.todo__item > div {
+    width: 80%;
+}
+
+.todo__item:hover {
+    cursor: pointer;
+    transition: all .5s ease;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.todo__item > input[type='text'] {
+    border: none;
+    width: 80%;
+    font: inherit;
+}
+
+.todo__item > input[type='button'],
+.todo__item > input[type='checkbox'] {
+    width: 30px;
+    height: 30px;
+    font: inherit;
+}
+
+.todo__item > input[type='checkbox']:checked + div {
+    text-decoration: line-through;
+}
+
+.todo__new-item {
+    display: flex;
+    background-color: white;
+    width: 100%;
+    height: 70px;
+    justify-content: space-evenly;
+    padding: 20px 0;
+    box-shadow: 1px 1px 5px var(--secondary-color);
+    margin: 10px;
+    font: inherit;
+    font-size: 2rem;
+}
+
+.todo__new-item > input {
+    background-color: white;
+    border: none;
+    width: 80%;
+    outline: none;
+    font: inherit;
+}
+
+.todo__new-item > input::placeholder {
+    font-style: italic;
+    font-weight: normal;
+}
+
+.image-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    gap: 10px;
+    padding: 5px;
+}
+
+.todo-gif {
+    max-width: 60%;
+    height: auto;
+}
+
+.image-text-container p {
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: 400;
+}
+
+.home-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: block;
+}
+
+.home-icon img {
+    width: 40px; 
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.2s; 
+}
+
+.home-icon img:hover {
+    transform: scale(1.1); 
+}
+
+/* Media Queries para responsividade */
+
+/* Ajuste para telas maiores */
+@media (min-width: 1024px) {
+    .image-text-container img {
+        max-width: 35%;
+    }
+
+    .todo-gif {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .image-text-container p {
+        font-size: 2rem;
+        padding: 20px;
+    }
+}
+
+/* Ajuste para telas médias */
+@media (max-width: 768px) {
+    .todo__title {
+        font-size: 2rem;
+    }
+
+    .todo {
+        width: 95%;
+    }
+
+    .todo__new-item {
+        height: 60px;
+    }
+
+    .todo__item {
+        height: 50px;
+    }
+
+    .todo__item > input[type='button'],
+    .todo__item > input[type='checkbox'] {
+        width: 25px;
+        height: 25px;
+    }
+
+    .todo-gif {
+        max-width: 40%;
+    }
+
+    .image-text-container p {
+        font-size: 1.75rem;
+    }
+
+    .home-icon img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .cloud-img {
+        max-width: 25%;
+    }
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 480px) {
+    .todo__title {
+        font-size: 1.5rem;
+    }
+
+    .todo__new-item > input {
+        width: 100%;
+    }
+
+    .todo-gif {
+        max-width: 45%;
+    }
+
+    .image-text-container p {
+        font-size: 2rem;
+    }
+
+    .cloud-img {
+        max-width: 25%;
+    }
+}

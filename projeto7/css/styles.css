@@ -1,0 +1,148 @@
+
+html, body {
+    height: 100%;
+    margin: 0;  /* Remove a margem padrão */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #00BFFF, #87CEEB);
+
+}
+
+header {
+    flex: 1;
+}
+footer p{
+    font-size: 20px;
+}
+footer {
+    color: black; 
+    text-align: center; 
+    padding: 20px;
+    width:100%;
+    position: relative;
+}
+
+.repo-link {
+    color: #ff7043; 
+    text-decoration: none; 
+}
+
+.repo-link:hover {
+    color: #ff5722;
+    text-decoration: underline;
+}
+
+.container {
+    text-align: center;
+    z-index: 1; 
+}
+
+h1 {
+    margin: 10px 0;
+    font-size: 150px;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+h3 {
+    font-family: "Satisfy", cursive;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+p {
+    font-size: 25px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.start-btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #B398F1;
+    border-radius: 20px;
+    border: 1px solid white;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, border-color 0.3s, transform 0.2s ease;
+    margin-top: 10px;
+    width: 180px;
+}
+
+.start-btn:hover {
+    background-color: #22b2da;
+    transform: scale(1.05);
+}
+
+.start-btn:focus, .start-btn:active {
+    outline: none; 
+    background-color: #9A7AF4;
+}
+
+.heart {
+    width: 300px;
+}
+
+.cloud {
+    position: absolute;
+    z-index: 0;
+}
+
+.clouds-top-left {
+    top: 20px;
+    left: 20px;
+}
+
+.clouds-bottom-left {
+    bottom: 20px;
+    left: 20px;
+}
+
+.clouds-bottom-right {
+    bottom: 20px;
+    right: 20px;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .start-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+        width: 150px;
+    }
+
+    .heart {
+        width: 100px;
+    }
+
+    .clouds-top-left, .clouds-bottom-left, .clouds-bottom-right {
+        width: 150px;
+    }
+}
+
+.repo-link {
+    color: inherit;       /* Usa a cor do texto pai */
+    text-decoration: none; /* Remove o sublinhado */
+    font-weight: bold;     /* Deixe mais visível se desejar */
+    cursor: pointer;       /* Mostra que é clicável */
+}
+.repo-link:hover {
+    color: #555;           /* Muda levemente a cor no hover para destacar */
+}
